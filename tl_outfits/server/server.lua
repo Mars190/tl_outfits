@@ -13,11 +13,11 @@ for k,v in pairs(TL_C.Outfits) do
 end
 
 if table.concat(serverSideIds) ~= table.concat(clientSideIds) then
-    print("^1[tl_outfits]^7 ^3[Ids]^7 Error in der Config!\n^5Registrierte Ids in der sv_config:^7")
+    print("^1[tl_outfits]^7 ^3[Ids]^7 Error in the config!\n^5Registered ids in sv_config:^7")
     for k,v in pairs(serverSideIds) do
         print(v)
     end
-    print("\n^5Ids die in der cl_config eingetragen sind:^7")
+    print("\n^5Ids which are in the cl_config registered:^7")
     for k,v in pairs(clientSideIds) do
         print(v)
     end
@@ -39,11 +39,11 @@ MySQL.query('SELECT * FROM items', {}, function(data)
         end
     end
     if successfullItems ~= registeredItems then
-        print("^1[tl_outfits]^7 ^3[Items]^7 Error in der Config!\n^5Registrierte Items:^7")
+        print("^1[tl_outfits]^7 ^3[Ids]^7 Error in the config!\n^5Registered ids in sv_config:^7")
         for _,v in pairs(registeredObject) do
             print(v.name)
         end
-        print("\n^5Items die in der Config eingetragen sind:^7")
+        print("\n^5Ids which are in the cl_config registered:^7")
         for k,v in pairs(TL_S.Outfits) do
             print(v.itemname)
         end

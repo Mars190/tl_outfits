@@ -12,14 +12,14 @@ function normalSkin()
 	  TriggerEvent('skinchanger:loadSkin', skin)
 	end)
     used = false
-    ESX.ShowNotification("Dein Outfit wurde zurückgesetzt", "success", "Outfit")
+    ESX.ShowNotification("Outfit resetted", "success", "Outfit")
 end
 
 RegisterCommand("normalskin", function()
     if used then
         normalSkin()
     else
-        ESX.ShowNotification("Du hast kein Outfititem benutzt", "error", "Outfit")
+        ESX.ShowNotification("You didnt use an outfititem", "error", "Outfit")
     end
 end)
 
@@ -38,7 +38,7 @@ AddEventHandler('tl_outfits', function(outfitId)
                     TriggerEvent('skinchanger:loadClothes', skin, v.FemaleSkin) 
                 end
             end)
-            ESX.ShowNotification("/normalskin, um deinen Skin zurück zu ändern", "info", "Outfit")
+            ESX.ShowNotification("/normalskin, to use your normal skin again", "info", "Outfit")
             breaking = true
             used = true
         end
